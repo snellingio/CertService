@@ -1,0 +1,20 @@
+#!/bin/sh
+
+SERVICE=$1
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cat  << EOF > $DIR/../app/Services/$SERVICE.php
+<?php
+declare(strict_types=1);
+
+namespace Service;
+
+class $SERVICE
+{
+    public function __construct()
+    {
+
+    }
+}
+EOF

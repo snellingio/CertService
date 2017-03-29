@@ -1,0 +1,63 @@
+body {
+    font-family: 'Avenir Next', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #24292e;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+    color: #0366d6;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #24292e;
+    font-weight: 500;
+}
+
+header {
+    background-color: #205081;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 15px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .2);
+    margin-bottom: 30px;
+}
+
+header .brand {
+    padding-top: 15px;
+}
+
+header .brand a {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.8;
+}
+
+header .menu {
+    padding-top: 20px;
+}
+
+header .menu a {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border: 0 solid transparent;
+}
+
+header nav a, header nav a:hover {
+    color: #fff;
+    opacity: 0.8;
+}
+
+header .menu a.active, header nav a.active {
+    opacity: 1;
+}
+
+header .brand a:hover, header nav a:hover, header .menu a:hover {
+    opacity: 1;
+}

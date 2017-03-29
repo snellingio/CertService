@@ -1,0 +1,35 @@
+{
+  "name": "snellingio/thoughtful",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sam Snelling",
+      "email": "sam@onroi.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "7.*",
+    "roave/security-advisories": "dev-master",
+    "snelling/router": "dev-master",
+    "snelling/request": "dev-master",
+    "snelling/response": "dev-master",
+    "illuminate/database": "^5.4",
+    "ramsey/uuid": "^3.5",
+    "codeception/codeception": "^2.2",
+    "robmorgan/phinx": "^0.8.0",
+    "vlucas/phpdotenv": "^2.4",
+    "league/event": "^2.1",
+    "league/container": "^2.4",
+    "defuse/php-encryption": "^2.0",
+    "acmephp/core": "^1.0@beta",
+    "league/flysystem": "^1.0"
+  },
+  "autoload": {
+    "classmap": [
+      "app/"
+    ]
+  }
+}

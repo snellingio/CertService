@@ -1,0 +1,20 @@
+#!/bin/sh
+
+CONTROLLER=$1
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cat  << EOF > $DIR/../app/Controllers/$CONTROLLER.php
+<?php
+declare(strict_types=1);
+
+namespace Controller;
+
+class $CONTROLLER extends Controller
+{
+    public function get(): bool
+    {
+        return true;
+    }
+}
+EOF

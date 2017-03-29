@@ -1,0 +1,23 @@
+#!/bin/sh
+
+LISTENER=$1
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cat  << EOF > $DIR/../app/Models/$LISTENER.php
+<?php
+declare(strict_types=1);
+
+namespace Listener;
+
+use League\Event\AbstractListener;
+use League\Event\EventInterface;
+
+class $LISTENER extends AbstractListener
+{
+    public function handle(EventInterface $event, $param = null)
+    {
+
+    }
+}
+EOF

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+MODEL=$1
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cat  << EOF > $DIR/../app/Models/$MODEL.php
+<?php
+declare (strict_types = 1);
+
+namespace Model;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class $MODEL extends Model
+{
+    use SoftDeletes;
+
+    protected \$hidden = ['id'];
+}
+EOF
