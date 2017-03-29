@@ -8,27 +8,27 @@ environments:
     production:
         adapter: pgsql
         host: localhost
-        name: certservice_prod
-        user: localhost
-        pass: ''
+        name: postgres
+        user: postgres
+        pass: 'password'
         port: 5432
         charset: utf8
 
     development:
         adapter: pgsql
         host: localhost
-        name: certservice_dev
-        user: localhost
-        pass: ''
+        name: postgres
+        user: postgres
+        pass: 'password'
         port: 5432
         charset: utf8
 
     testing:
         adapter: pgsql
         host: localhost
-        name: certservice_test
-        user: localhost
-        pass: ''
+        name: postgres
+        user: postgres
+        pass: 'password'
         port: 5432
         charset: utf8
 
