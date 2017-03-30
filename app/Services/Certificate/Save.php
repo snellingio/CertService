@@ -14,8 +14,8 @@ class Save
 
     public function handle(ParsedCertificate $parsedCertificate, Domain $domain)
     {
-        $issuerChain = array_map(function (Ssl\Certificate $cert) {
-            return $cert->getPEM();
+        $issuerChain = array_map(function (Ssl\Certificate $certificate) {
+            return $certificate->getPEM();
         }, $parsedCertificate->getSource()->getIssuerChain());
 
         $certificate                = new Certificate;
