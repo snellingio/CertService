@@ -16,10 +16,7 @@ class Check
         $solver->solve($challenge);
 
         $check = $acme->challengeAuthorization($challenge);
-        if ($check['status'] !== 'valid') {
-            return false;
-        }
 
-        return true;
+        return !($check['status'] !== 'valid');
     }
 }
