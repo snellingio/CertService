@@ -6,6 +6,13 @@ namespace Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * @property Challenge challenge
+ * @property KeyPair   keypair
+ * @property string    id
+ * @property string    name
+ * @property string    uuid
+ */
 class Domain extends Model
 {
     use SoftDeletes;
