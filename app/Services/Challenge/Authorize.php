@@ -5,6 +5,7 @@ namespace Service\Challenge;
 
 use AcmePhp\Core\AcmeClient;
 use AcmePhp\Core\Protocol\AuthorizationChallenge;
+use Exception;
 use Model\Domain;
 
 class Authorize
@@ -15,6 +16,7 @@ class Authorize
         $authorizationChallenges = $acme->requestAuthorization($domain->name);
 
         foreach ($authorizationChallenges as $authorizationChallenge) {
+            /* @var $authorizationChallenge AuthorizationChallenge */
             if ('http-01' === $authorizationChallenge->getType()) {
                 break;
             }
@@ -22,7 +24,8 @@ class Authorize
 
         /* @var $authorizationChallenge AuthorizationChallenge */
         if ($authorizationChallenge === null) {
-            throw new \Exception('Uh oh');
+            /** @noinspection ThrowRawExceptionInspection */
+            throw new Exception('Uh oh');
         }
 
         (new Save)->handle($authorizationChallenge, $domain);
